@@ -1,0 +1,11 @@
+<div [ngClass]="theme">
+    <div class="themes">
+        <div (click)="themeChange('t1')" class="circle" [ngStyle]="theme1">1</div>
+        <div (click)="themeChange('t2')" class="circle" [ngStyle]="theme2">2</div>
+    </div>
+    <h3>{{data}}</h3>
+    <hr>
+    <ul>
+        <li *ngFor="let x of items" (click)="sendToParent(x)">{{x}}</li>
+    </ul>
+</div>

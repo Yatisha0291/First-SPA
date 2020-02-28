@@ -1,0 +1,24 @@
+<div id="app">
+    <h1>
+        {{appname}}
+    </h1>
+    <hr>
+    <h4>
+        <u><i>Technologies Used</i></u>
+    </h4>
+    <ul>
+        <li *ngFor="let x of technologies">{{x}}</li>
+    </ul>
+    <div id="box-group">
+        <app-box [title]="titles[0]" [items]="information[0]" (send)="process($event)"></app-box>
+        <app-box [title]="titles[1]" [items]="information[1]" (send)="process($event)"></app-box>
+        <app-box [title]="titles[2]" [items]="information[2]" (send)="process($event)"></app-box>
+    </div>
+    <app-third [item]="item"></app-third>
+    <hr>
+    <h3>
+        Developed by {{programmer}}
+    </h3>
+
+
+</div>
